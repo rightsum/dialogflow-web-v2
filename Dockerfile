@@ -2,6 +2,7 @@ FROM node as builder
 WORKDIR /app
 COPY . .
 RUN npm install
+RUN npx browserslist@latest --update-db
 RUN npm run build
 
 FROM nginx:alpine
