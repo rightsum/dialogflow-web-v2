@@ -1,8 +1,9 @@
 FROM node as builder
 WORKDIR /app
 COPY . .
-RUN npm install
-RUN npx browserslist@latest --update-db
+ENV NODE_OPTIONS=--openssl-legacy-provider
+RUN npm install caniuse-lite --force
+RUN npm install --force
 RUN npm run build
 
 FROM nginx:alpine

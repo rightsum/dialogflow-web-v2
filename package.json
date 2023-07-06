@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "audio-recorder-polyfill": "^0.4.1",
+    "caniuse-lite": "^1.0.30001512",
     "core-js": "^3.16.1",
     "dialogflow-gateway": "0.1.0",
     "hark": "^1.2.3",
